@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | MindRecoder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="centered-container">
+        <div class="auth-card glass">
+            <img src="Assets/Logo/mrLogo.png" alt="Logo">
+            <h2>Welcome Back</h2>
+            <p>Neural authentication is active. Access is granted to all registered nodes.</p>
+
+            <div style="margin-bottom: 24px;">
+                <input type="text" id="accessCode" placeholder="Enter Access Code"
+                    style="width: 100%; padding: 15px; border-radius: 12px; background: rgba(0,0,0,0.4); border: 2px solid var(--glass-border); color: white; font-size: 1rem; text-align: center; letter-spacing: 2px;">
+                <p id="errorMsg" style="color: #ff4d4d; font-size: 0.8rem; margin-top: 10px; display: none;">Invalid
+                    Neural Access Code</p>
+            </div>
+
+            <button onclick="validateCode()" class="btn btn-primary" style="width: 100%;">Initialize Session</button>
+
+            <p style="margin-top: 24px; font-size: 0.8rem; color: var(--text-secondary);">Unauthorized access is
+                strictly monitored.</p>
+        </div>
+    </div>
+
+    <script>
+        function validateCode() {
+            const code = document.getElementById('accessCode').value.trim();
+            const error = document.getElementById('errorMsg');
+
+            if (code === 'X') {
+                window.location.href = 'auth.html';
+            } else {
+                error.style.display = 'block';
+                document.getElementById('accessCode').style.borderColor = '#ff4d4d';
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('accessCode').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                validateCode();
+            }
+        });
+    </script>
+</body>
+
+</html>
