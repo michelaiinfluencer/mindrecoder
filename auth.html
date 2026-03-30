@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             pointer-events: none;
             z-index: 1000;
         }
-        
+
         #status {
             font-family: 'Courier New', Courier, monospace;
             color: var(--accent-blue);
@@ -29,8 +30,8 @@
 
         .node-container {
             position: relative;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             margin-bottom: 40px;
         }
 
@@ -43,34 +44,40 @@
             animation: rotate 2s linear infinite;
         }
 
-        .ring-2 {
-            inset: 15px;
-            border-bottom: 2px solid var(--accent-blue);
-            animation: rotate 1.5s linear reverse infinite;
-        }
+
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body style="overflow: hidden;">
     <div class="scanline"></div>
-    
+
     <div class="centered-container">
         <div class="loader-container">
             <div class="node-container">
                 <div class="ring"></div>
                 <div class="ring-2"></div>
-                <img src="Assets/Logo/mrLogo.png" alt="MindRecoder" style="width: 60px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <img src="Assets/Logo/mrLogo.png" alt="MindRecoder"
+                    style="width: 60px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             </div>
-            
+
             <h2 class="gradient-text" style="letter-spacing: 4px; font-size: 1.2rem;">NEURAL AUTHORIZATION</h2>
             <div id="status">Syncing synapses...</div>
-            
-            <div style="width: 250px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin: 30px auto; overflow: hidden;">
-                <div id="progress" style="width: 0%; height: 100%; background: var(--accent-blue); transition: width 0.1s linear; box-shadow: 0 0 10px var(--accent-blue);"></div>
+
+            <div
+                style="width: 250px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin: 30px auto; overflow: hidden;">
+                <div id="progress"
+                    style="width: 0%; height: 100%; background: var(--accent-blue); transition: width 0.1s linear; box-shadow: 0 0 10px var(--accent-blue);">
+                </div>
             </div>
         </div>
     </div>
@@ -108,4 +115,5 @@
         }, 50);
     </script>
 </body>
+
 </html>

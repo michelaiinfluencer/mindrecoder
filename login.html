@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | MindRecoder</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <a href="index.html" class="btn btn-outline" style="position: absolute; top: 30px; right: 5%; z-index: 100;">Return
+        to Main</a>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -17,12 +22,10 @@
 
     <div class="centered-container">
         <div class="auth-card glass">
-            <img src="Assets/Logo/mrLogo.png" alt="Logo">
-            <h2>Welcome Back</h2>
-            <p>Neural authentication is active. Access is granted to all registered nodes.</p>
+            <img src="Assets/Logo/mrLogo.png" alt="Logo" style="width: 200px; height: 200px;">
 
             <div style="margin-bottom: 24px;">
-                <input type="text" id="accessCode" placeholder="Enter Access Code"
+                <input type="text" id="accessCode" placeholder="Use your Email to login"
                     style="width: 100%; padding: 15px; border-radius: 12px; background: rgba(0,0,0,0.4); border: 2px solid var(--glass-border); color: white; font-size: 1rem; text-align: center; letter-spacing: 2px;">
                 <p id="errorMsg" style="color: #ff4d4d; font-size: 0.8rem; margin-top: 10px; display: none;">Invalid
                     Neural Access Code</p>
@@ -40,7 +43,7 @@
             const code = document.getElementById('accessCode').value.trim();
             const error = document.getElementById('errorMsg');
 
-            if (code === 'X') {
+            if (code.includes('@')) {
                 window.location.href = 'auth.html';
             } else {
                 error.style.display = 'block';

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Dashboard | MindRecoder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         /* Custom Player Styles */
         .player-bar {
@@ -23,7 +27,7 @@
             transform: translateY(100%);
             transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
-        
+
         .player-bar.active {
             transform: translateY(0);
         }
@@ -60,7 +64,7 @@
             width: 100%;
             max-width: 600px;
             height: 4px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 2px;
             position: relative;
             cursor: pointer;
@@ -83,8 +87,22 @@
         .logout-btn:hover {
             color: white;
         }
+
+        /* Padding for when player is active */
+        .product-grid.player-active {
+            padding-bottom: 150px;
+            transition: padding-bottom 0.5s ease;
+        }
+
+        /* Playing State Glow */
+        .product-card.is-playing {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 30px var(--accent-glow);
+            transform: translateY(-5px);
+        }
     </style>
 </head>
+
 <body>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -93,18 +111,20 @@
 
     <nav class="scrolled">
         <div class="logo-container">
-            <img src="Assets/Logo/mrLogo.png" alt="Logo">
+            <img src="Assets/Logo/mrLogo.png" alt="Logo" style="width: 90px; height: 90px;">
             <span class="logo-text">MindRecoder</span>
         </div>
         <div style="display: flex; align-items: center; gap: 30px;">
-            <span style="color: var(--accent-blue); font-size: 0.9rem;">Node: Alpha-101 (Active)</span>
-            <a href="index.html" class="logout-btn">Terminate Session</a>
+
+            <a href="index.html" class="btn btn-outline"
+                style="position: absolute; top: 8px; right: 5%; z-index: 100;">Logout</a>
         </div>
     </nav>
 
     <header class="dashboard-header">
         <h1 style="margin-bottom: 10px;">Neural <span class="gradient-text">Library</span></h1>
-        <p style="color: var(--text-secondary);">Select a frequency program to begin re-coding.</p>
+        <p style="color: var(--text-secondary);">Select a frequency program to begin re-coding. Listen with headphones
+            3-4 times a day for best results.</p>
     </header>
 
     <main class="product-grid" id="mainGrid">
@@ -113,25 +133,30 @@
 
     <script>
         const programs = [
-            { id: 1, title: "Stress Decimation 01", desc: "Erase cortisol spikes and recalibrate your nervous system for total composure.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Images/mrimg1.png", dur: "15:00" },
-            { id: 2, title: "Sovereign Mind", desc: "Develop an unshakeable inner frame. Block external validation loops.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Logo/mrLogo.png", dur: "12:30" },
-            { id: 3, title: "Executive Order", desc: "Advanced organization protocols. Hard-code tactical planning and excellence.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Images/mrimg1.png", dur: "20:00" },
-            { id: 4, title: "Rapid Recall", desc: "Enhance synaptic pathways for near-instant memory retrieval and pattern recognition.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Logo/mrLogo.png", dur: "18:45" },
-            { id: 5, title: "Infinite Drive", desc: "Fuel your internal engine. Replace procrastination with relentless forward motion.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Images/mrimg1.png", dur: "45:00" },
-            { id: 6, title: "Emotional Stoicism", desc: "Construct a logical barrier against emotional volatility and reactive behavior.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Logo/mrLogo.png", dur: "10:00" },
-            { id: 7, title: "Creative Flow", desc: "Bypass the inner critic and access the deep subconscious well of innovation.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Images/mrimg1.png", dur: "30:00" },
-            { id: 8, title: "Social Dominance", desc: "Subconscious cues for presence, authority, and charismatic influence.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Logo/mrLogo.png", dur: "15:15" },
-            { id: 9, title: "Sleep Architect", desc: "The ultimate shutdown sequence. Deep REM recovery for peak mental restoration.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Images/mrimg1.png", dur: "60:00" },
-            { id: 10, title: "Fear Dissolution", desc: "Systematically dismantle phobias and hesitation protocols in real-time.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Logo/mrLogo.png", dur: "22:20" },
-            { id: 11, title: "Peak Physicality", desc: "Neuro-muscular synchronization for enhanced mind-muscle connection and performance.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Images/mrimg1.png", dur: "30:00" },
-            { id: 12, title: "Transcendent Logic", desc: "Tier 4 access: Pure algorithmic thinking for complex problem solving.", asset: "Assets/Audio/mr1.mp3", img: "Assets/Logo/mrLogo.png", dur: "55:00" }
+            { id: 13, title: "Focus", desc: "Enhance deep concentration and single-minded focus.", asset: "assets/audio/MR13Focus6m.MP3", img: "Assets/Images/focus.png", dur: "5:49" },
+            { id: 14, title: "Discipline", desc: "Forge unbreakable habits and iron-clad willpower.", asset: "assets/audio/MR14Discipline3m.MP3", img: "Assets/Images/discipline.png", dur: "3:33" },
+            { id: 18, title: "Wealth", desc: "Reprogram your subconscious mind for abundance and financial success.", asset: "assets/audio/MR18Wealth3m.MP3", img: "Assets/Images/wealth.png", dur: "3:33" },
+            { id: 19, title: "Success", desc: "Align your neural pathways with achievement and peak performance.", asset: "assets/audio/MR19Success3m.MP3", img: "Assets/Images/success.png", dur: "3:33" },
+            { id: 1, title: "Stress Decimation", desc: "Erase cortisol spikes and recalibrate your nervous system for total composure.", asset: "assets/audio/MR1StressDecimation7m.MP3", img: "Assets/Images/stress.png", dur: "7:05" },
+            { id: 2, title: "Sovereign Mind", desc: "Develop an unshakeable inner frame. Block external validation loops.", asset: "assets/audio/MR2SovereignMind5m.MP3", img: "Assets/Images/sovereignMind.png", dur: "5:16" },
+            { id: 3, title: "Executive Order", desc: "Advanced organization protocols. Hard-code tactical planning and excellence.", asset: "assets/audio/MR3ExecutiveOrder4m.MP3", img: "Assets/Images/executiveOrder.png", dur: "3:56" },
+            { id: 4, title: "Rapid Recall", desc: "Enhance synaptic pathways for near-instant memory retrieval and pattern recognition.", asset: "assets/audio/MR4RapidRecall3m.MP3", img: "Assets/Images/rapidRecall.png", dur: "3:05" },
+            { id: 5, title: "Infinite Drive", desc: "Fuel your internal engine. Replace procrastination with relentless forward motion.", asset: "assets/audio/MR5InfiniteDrive4m.MP3", img: "Assets/Images/infiniteDrive.png", dur: "4:25" },
+            { id: 6, title: "Emotional Stoicism", desc: "Construct a logical barrier against emotional volatility and reactive behavior.", asset: "assets/audio/MR6EmotionalStoicism5m.MP3", img: "Assets/Images/emotionalStoicism.png", dur: "4:47" },
+            { id: 7, title: "Creativity Flow", desc: "Bypass the inner critic and access the deep subconscious well of innovation.", asset: "assets/audio/MR7CreativityFlow5m.MP3", img: "Assets/Images/creativeFlow.png", dur: "4:45" },
+            { id: 8, title: "Social Dominance", desc: "Subconscious cues for presence, authority, and charismatic influence.", asset: "assets/audio/MR8ocialDominance4m.MP3", img: "Assets/Images/socialDominance.png", dur: "4:45" },
+            { id: 9, title: "Sleep Architect", desc: "The ultimate shutdown sequence. Deep REM recovery for peak mental restoration.", asset: "assets/audio/MR9SleepArchitect5m.MP3", img: "Assets/Images/sleepArchitect.png", dur: "4:25" },
+            { id: 10, title: "Fear Dissolution", desc: "Systematically dismantle phobias and hesitation protocols in real-time.", asset: "assets/audio/MR10FearDissolution3m.MP3", img: "Assets/Images/fearDissolution.png", dur: "3:33" },
+            { id: 11, title: "Peak Physicality", desc: "Neuro-muscular synchronization for enhanced mind-muscle connection and performance.", asset: "assets/audio/MR11PeakPhysicality3m.MP3", img: "Assets/Images/peakPhysicality.png", dur: "3:49" },
+            { id: 12, title: "Transcendent Logic", desc: "Tier 4 access: Pure algorithmic thinking for complex problem solving.", asset: "assets/audio/MR12TrancendentLogic3m.MP3", img: "Assets/Images/transcendentLogic.png", dur: "3:33" },
         ];
 
         const grid = document.getElementById('mainGrid');
-        
+
         programs.forEach(p => {
             const card = document.createElement('article');
             card.className = 'product-card glass';
+            card.id = `card-${p.id}`;
             card.innerHTML = `
                 <div class="product-img">
                     <img src="${p.img}" alt="${p.title}" style="filter: brightness(0.7);">
@@ -141,7 +166,7 @@
                     <p>${p.desc}</p>
                 </div>
                 <div class="audio-controls">
-                    <button class="play-btn" onclick="playAudio('${p.title}', '${p.asset}', '${p.img}')">
+                    <button class="play-btn card-play-btn" data-id="${p.id}" onclick="playAudio('${p.title}', '${p.asset}', '${p.img}', ${p.id})">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
                     </button>
                     <div style="flex: 1;">
@@ -187,7 +212,9 @@
         <div class="player-controls">
             <div class="player-btns">
                 <button onclick="togglePlay()" id="playBtn" class="play-btn" style="width: 40px; height: 40px;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
                 </button>
             </div>
             <div class="progress-wrapper" onclick="seek(event)">
@@ -210,15 +237,39 @@
         const pTime = document.getElementById('p-time');
         const playBtn = document.getElementById('playBtn');
 
-        function playAudio(title, src, img) {
+        let currentProgramId = null;
+
+        function playAudio(title, src, img, id) {
+            grid.classList.add('player-active');
+
+            // Calculate if the clicked card is in the last row
+            const cards = Array.from(document.querySelectorAll('.product-card'));
+            const clickedCard = document.getElementById(`card-${id}`);
+            const cardIndex = cards.indexOf(clickedCard);
+
+            // Get number of columns currently displayed
+            const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+            const isLastRow = cardIndex >= (cards.length - (cards.length % columns || columns));
+
+            // Only scroll if it's a last-row card
+            if (isLastRow) {
+                setTimeout(() => {
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                }, 100);
+            }
+
+            // If it's the exact same track, just toggle play/pause
             if (audio.src.includes(src)) {
                 togglePlay();
                 return;
             }
-            
+
+            // Switch to new track
+            audio.pause();
             audio.src = src;
             pTitle.innerText = title;
             pImg.src = img;
+            currentProgramId = id;
             playerBar.classList.add('active');
             audio.play();
             updatePlayBtn(true);
@@ -235,15 +286,33 @@
         }
 
         function updatePlayBtn(isPlaying) {
-            playBtn.innerHTML = isPlaying 
+            // Update Global Player Button
+            playBtn.innerHTML = isPlaying
                 ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>'
                 : '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+
+            // Reset all cards
+            document.querySelectorAll('.product-card').forEach(card => card.classList.remove('is-playing'));
+            document.querySelectorAll('.card-play-btn').forEach(btn => {
+                btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            });
+
+            // Highlight current card
+            if (currentProgramId) {
+                const activeCard = document.getElementById(`card-${currentProgramId}`);
+                const activeBtn = activeCard.querySelector('.card-play-btn');
+
+                if (isPlaying) {
+                    activeCard.classList.add('is-playing');
+                    activeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+                }
+            }
         }
 
         audio.ontimeupdate = () => {
             const percent = (audio.currentTime / audio.duration) * 100;
             pProgress.style.width = percent + '%';
-            
+
             const cur = formatTime(audio.currentTime);
             const dur = formatTime(audio.duration || 0);
             pTime.innerText = `${cur} / ${dur}`;
@@ -263,4 +332,5 @@
         }
     </script>
 </body>
+
 </html>
