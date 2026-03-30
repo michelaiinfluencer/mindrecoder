@@ -9,7 +9,7 @@
     <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
 </head>
 
-<body>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -24,7 +24,7 @@
     </nav>
 
     <div class="centered-container"
-        style="min-height: auto; padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px;">
+        style="flex: 1; min-height: auto; padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px;">
         <div class="glass" style="max-width: 600px; padding: 40px; text-align: center;">
             <h2 class="gradient-text" style="font-size: 2rem; margin-bottom: 20px;">Secure Neural Link</h2>
 
@@ -129,8 +129,8 @@
     </script>
 
     <footer
-        style="padding: 30px 5%; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); margin-top: 40px; font-size: 0.82rem;">
-        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 12px;">
+        style="padding: 16px 5% 20px; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); margin-top: 24px; font-size: 0.82rem;">
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 8px;">
             <a href="impressum.html"
                 style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
                 onmouseover="this.style.color='var(--accent-blue)'"
