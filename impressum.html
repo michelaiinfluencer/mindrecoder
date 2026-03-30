@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | MindRecoder</title>
+    <meta name="description" content="Legal disclosure and imprint for MindRecoder – Michael Seifert, Hamburg.">
+    <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 4px;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 2px 10px var(--accent-glow);
+        }
+
+        .legal-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            text-align: left;
+        }
+
+        .legal-section h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .legal-section p,
+        .legal-section a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .legal-section a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .legal-section a:hover {
+            text-decoration: underline;
+        }
+
+        .page-wrap {
+            padding: calc(var(--nav-height) + 40px) 5% 60px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="scrolled">
+        <div class="logo-container">
+            <img src="Assets/Logo/mrLogo.png" alt="Logo" style="width: 90px; height: 90px;">
+            <span class="logo-text">MindRecoder</span>
+        </div>
+        <a href="index.html" class="btn btn-outline nav-corner-btn">← Back</a>
+    </nav>
+
+    <div class="page-wrap">
+        <!-- Header row -->
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 36px;">
+            <h1 class="gradient-text" style="font-size: 2.2rem;" id="page-title">Impressum</h1>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-de" onclick="setLang('de')">DE</button>
+            </div>
+        </div>
+
+        <div class="glass" style="padding: 40px;">
+            <div class="legal-content">
+
+                <!-- Responsible person -->
+                <div class="legal-section">
+                    <h3 id="s1-title">Responsible for Content</h3>
+                    <p>
+                        Michael Seifert<br>
+                        Stammannstrasse 6<br>
+                        22303 Hamburg<br>
+                        Germany
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="legal-section">
+                    <h3 id="s2-title">Contact</h3>
+                    <p>
+                        <span id="s2-email-label">Email:</span>
+                        <a href="mailto:michel.aiinfluencer@gmail.com">michel.aiinfluencer@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- Platform type -->
+                <div class="legal-section">
+                    <h3 id="s3-title">Type of Service</h3>
+                    <p id="s3-body">
+                        MindRecoder is a digital content platform offering audio programs for personal development.
+                        The platform is operated as a sole trader / private individual and is not subject to VAT
+                        registration (Kleinunternehmerregelung, §19 UStG).
+                    </p>
+                </div>
+
+                <!-- Dispute resolution -->
+                <div class="legal-section">
+                    <h3 id="s4-title">Online Dispute Resolution</h3>
+                    <p id="s4-body">
+                        The European Commission provides a platform for online dispute resolution (ODR):
+                        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">
+                            https://ec.europa.eu/consumers/odr</a>.<br>
+                        We are not obliged to participate in a dispute resolution procedure before a consumer
+                        arbitration board, nor do we wish to do so.
+                    </p>
+                </div>
+
+                <!-- Liability -->
+                <div class="legal-section">
+                    <h3 id="s5-title">Liability for Content</h3>
+                    <p id="s5-body">
+                        The contents of this website have been created with the greatest possible care.
+                        However, we cannot guarantee the accuracy, completeness, or timeliness of the content.
+                        As a service provider, we are responsible for our own content on these pages under general
+                        law. We are not obligated to monitor transmitted or stored third-party information or to
+                        investigate circumstances that indicate illegal activity.
+                    </p>
+                </div>
+
+                <!-- Copyright -->
+                <div class="legal-section">
+                    <h3 id="s6-title">Copyright</h3>
+                    <p id="s6-body">
+                        The content and works on this website are subject to German copyright law.
+                        Reproduction, processing, distribution, or any form of commercialisation of such material
+                        beyond the scope of the copyright law requires the prior written consent of the author.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        style="padding: 40px 5%; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); margin-top: 60px; font-size: 0.85rem;">
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px;">
+            <a href="impressum.html"
+                style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Impressum</a>
+            <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+            <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2026 MindRecoder – Michael Seifert. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: 'Impressum',
+                s1: 'Responsible for Content',
+                s2: 'Contact',
+                s2email: 'Email:',
+                s3: 'Type of Service',
+                s3body: 'MindRecoder is a digital content platform offering audio programs for personal development. The platform is operated as a sole trader / private individual and is not subject to VAT registration (Kleinunternehmerregelung, §19 UStG).',
+                s4: 'Online Dispute Resolution',
+                s4body: 'The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.<br>We are not obliged to participate in a dispute resolution procedure before a consumer arbitration board, nor do we wish to do so.',
+                s5: 'Liability for Content',
+                s5body: 'The contents of this website have been created with the greatest possible care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages under general law.',
+                s6: 'Copyright',
+                s6body: 'The content and works on this website are subject to German copyright law. Reproduction, processing, distribution, or any form of commercialisation of such material beyond the scope of the copyright law requires the prior written consent of the author.',
+            },
+            de: {
+                pageTitle: 'Impressum',
+                s1: 'Verantwortlich für den Inhalt',
+                s2: 'Kontakt',
+                s2email: 'E-Mail:',
+                s3: 'Art des Dienstes',
+                s3body: 'MindRecoder ist eine digitale Inhaltsplattform, die Audioprogramme zur persönlichen Entwicklung anbietet. Die Plattform wird als Einzelunternehmer / Privatperson betrieben und unterliegt nicht der Umsatzsteuerpflicht (Kleinunternehmerregelung, §19 UStG).',
+                s4: 'Online-Streitbeilegung',
+                s4body: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.<br>Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+                s5: 'Haftung für Inhalte',
+                s5body: 'Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.',
+                s6: 'Urheberrecht',
+                s6body: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.',
+            }
+        };
+
+        function setLang(lang) {
+            const t = translations[lang];
+            document.getElementById('page-title').textContent = t.pageTitle;
+            document.getElementById('s1-title').textContent = t.s1;
+            document.getElementById('s2-title').textContent = t.s2;
+            document.getElementById('s2-email-label').textContent = t.s2email;
+            document.getElementById('s3-title').textContent = t.s3;
+            document.getElementById('s3-body').textContent = t.s3body;
+            document.getElementById('s4-title').textContent = t.s4;
+            document.getElementById('s4-body').innerHTML = t.s4body;
+            document.getElementById('s5-title').textContent = t.s5;
+            document.getElementById('s5-body').textContent = t.s5body;
+            document.getElementById('s6-title').textContent = t.s6;
+            document.getElementById('s6-body').textContent = t.s6body;
+
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+
+</html>

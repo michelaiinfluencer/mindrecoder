@@ -23,7 +23,8 @@
         <a href="index.html" class="btn btn-outline nav-corner-btn">Return to Main</a>
     </nav>
 
-    <div class="centered-container">
+    <div class="centered-container"
+        style="min-height: auto; padding-top: calc(var(--nav-height) + 40px); padding-bottom: 40px;">
         <div class="glass" style="max-width: 600px; padding: 40px; text-align: center;">
             <h2 class="gradient-text" style="font-size: 2rem; margin-bottom: 20px;">Secure Neural Link</h2>
 
@@ -39,18 +40,31 @@
                 </div>
             </div>
 
-            <div style="margin-top: 40px; padding: 30px; border-radius: 16px;">
-                <div style="display: flex; gap: 15px; justify-content: center;">
-                    <button onclick="showInstructionModal('https://www.paypal.com/ncp/payment/GD3TEAYJ8TD2E')"
-                        class="btn btn-outline"
-                        style="width: 150px; text-align: center; cursor: pointer;">PayPal</button>
-                    <button onclick="showInstructionModal('https://buy.stripe.com/test_fZu4gBgIx0Xu23W11h5gc02')"
-                        class="btn btn-primary"
-                        style="width: 150px; justify-content: center; cursor: pointer;">Stripe</button>
+            <!-- Legal Consent Checkbox -->
+            <div style="margin-top: 30px; text-align: left;">
+                <label id="consentLabel"
+                    style="display: flex; gap: 12px; align-items: flex-start; cursor: pointer; padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); transition: border-color 0.3s;">
+                    <input type="checkbox" id="consentCheckbox" onchange="handleConsent(this)"
+                        style="margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; accent-color: var(--accent-blue); cursor: pointer;">
+                    <span style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6;">
+                        I expressly agree that the execution of the contract begins before the end of the withdrawal
+                        period.<br>
+                        I understand that I thereby lose my right of withdrawal.
+                    </span>
+                </label>
+            </div>
+
+            <div style="margin-top: 24px; padding: 0; border-radius: 16px;">
+                <div style="display: flex; justify-content: center;">
+                    <button id="purchaseBtn"
+                        onclick="showInstructionModal('https://www.paypal.com/ncp/payment/GD3TEAYJ8TD2E')"
+                        class="btn btn-primary" disabled
+                        style="width: 220px; justify-content: center; cursor: not-allowed; opacity: 0.45; transition: opacity 0.3s, transform 0.2s;">Purchase
+                        Access</button>
                 </div>
             </div>
 
-            <p style="margin-top: 30px; font-size: 0.75rem; color: var(--text-secondary);">By proceeding, you
+            <p style="margin-top: 20px; font-size: 0.75rem; color: var(--text-secondary);">By proceeding, you
                 acknowledge that neural sync is a subjective experience. No refunds on digital consciousness modules.
             </p>
         </div>
@@ -78,6 +92,22 @@
     </div>
 
     <script>
+        function handleConsent(checkbox) {
+            const btn = document.getElementById('purchaseBtn');
+            const label = document.getElementById('consentLabel');
+            if (checkbox.checked) {
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                btn.style.cursor = 'pointer';
+                label.style.borderColor = 'var(--accent-blue)';
+            } else {
+                btn.disabled = true;
+                btn.style.opacity = '0.45';
+                btn.style.cursor = 'not-allowed';
+                label.style.borderColor = 'rgba(255,255,255,0.08)';
+            }
+        }
+
         function showInstructionModal(url) {
             const modal = document.getElementById('instructionModal');
             const proceedBtn = document.getElementById('proceedBtn');
@@ -97,6 +127,23 @@
             }
         }
     </script>
+
+    <footer
+        style="padding: 30px 5%; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); margin-top: 40px; font-size: 0.82rem;">
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 12px;">
+            <a href="impressum.html"
+                style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Impressum</a>
+            <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+            <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2026 MindRecoder – Michael Seifert. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>

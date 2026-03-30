@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | MindRecoder</title>
+    <meta name="description" content="Privacy Policy for MindRecoder – how we collect, process, and protect your data.">
+    <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 4px;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 2px 10px var(--accent-glow);
+        }
+
+        .legal-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            text-align: left;
+        }
+
+        .legal-section h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .legal-section p,
+        .legal-section li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .legal-section a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .legal-section a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-section ul {
+            padding-left: 20px;
+        }
+
+        .provider-badges {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .provider-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .provider-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .page-wrap {
+            padding: calc(var(--nav-height) + 40px) 5% 60px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="scrolled">
+        <div class="logo-container">
+            <img src="Assets/Logo/mrLogo.png" alt="Logo" style="width: 90px; height: 90px;">
+            <span class="logo-text">MindRecoder</span>
+        </div>
+        <a href="index.html" class="btn btn-outline nav-corner-btn">← Back</a>
+    </nav>
+
+    <div class="page-wrap">
+        <!-- Header row -->
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 36px;">
+            <h1 class="gradient-text" style="font-size: 2.2rem;" id="page-title">Privacy Policy</h1>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-de" onclick="setLang('de')">DE</button>
+            </div>
+        </div>
+
+        <div class="glass" style="padding: 40px;">
+            <div class="legal-content">
+
+                <!-- Controller -->
+                <div class="legal-section">
+                    <h3 id="s1-title">Controller / Data Protection</h3>
+                    <p id="s1-body">
+                        The data controller responsible for processing personal data on this website is:
+                    </p>
+                    <p>
+                        Michael Seifert<br>
+                        Stammannstrasse 6, 22303 Hamburg, Germany<br>
+                        <a href="mailto:michel.aiinfluencer@gmail.com">michel.aiinfluencer@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- Data collected -->
+                <div class="legal-section">
+                    <h3 id="s2-title">Data We Collect</h3>
+                    <p id="s2-body">When you visit our website or make a purchase, the following data may be collected:
+                    </p>
+                    <ul id="s2-list">
+                        <li>Name and email address (provided during checkout)</li>
+                        <li>Payment information processed via PayPal or Stripe (we do not store card data)</li>
+                        <li>IP address and browser information (standard server logs)</li>
+                        <li>Cookies required for session management</li>
+                    </ul>
+                </div>
+
+                <!-- Payment processing -->
+                <div class="legal-section">
+                    <h3 id="s3-title">Payment Processing</h3>
+                    <p id="s3-body">
+                        Payments on MindRecoder are processed exclusively through trusted third-party payment
+                        providers. We do not store any payment card data on our servers.
+                    </p>
+                    <div class="provider-badges">
+                        <!-- PayPal icon -->
+                        <span class="provider-badge">
+                            <svg viewBox="0 0 24 24" fill="#00d2ff" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.07 21.45l.3-1.94.04-.23-.01.01H5.14L7 8.5h5.5c1.84 0 3.12.37 3.84 1.13.68.72.87 1.6.56 2.82l-.01.06v.52l.27.15c.22.12.42.27.58.45.31.36.48.85.48 1.45 0 .69-.13 1.32-.38 1.87-.25.55-.6 1.01-1.04 1.37-.44.36-.97.62-1.56.77-.58.15-1.23.23-1.93.23H13c-.39 0-.73.28-.8.67l-.01.07-.47 2.96-.02.1-.01.04a.13.13 0 0 1-.13.1H9.2a.14.14 0 0 1-.14-.17z" />
+                            </svg>
+                            PayPal
+                        </span>
+                        <!-- Stripe icon -->
+                        <span class="provider-badge">
+                            <svg viewBox="0 0 24 24" fill="#00d2ff" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.48 7.3c0-.7.6-1 1.47-1 1.31 0 2.66.4 3.6.95V4.34A9.6 9.6 0 0 0 14.95 4C12.15 4 10.3 5.4 10.3 7.5c0 3.2 4.4 2.7 4.4 4.1 0 .83-.72 1.1-1.63 1.1-1.42 0-3.27-.59-4.11-1.38v2.94a10.4 10.4 0 0 0 4.1.87c2.87 0 4.84-1.36 4.84-3.5 0-3.44-4.42-2.83-4.42-4.33z" />
+                            </svg>
+                            Stripe
+                        </span>
+                    </div>
+                    <p id="s3-links" style="margin-top: 12px;">
+                        <a href="https://www.paypal.com/uk/legalhub/privacy-full" target="_blank" rel="noopener">PayPal
+                            Privacy Policy</a>
+                        &nbsp;·&nbsp;
+                        <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe Privacy Policy</a>
+                    </p>
+                </div>
+
+                <!-- Purpose of processing -->
+                <div class="legal-section">
+                    <h3 id="s4-title">Purpose of Processing</h3>
+                    <ul id="s4-list">
+                        <li>Fulfilling your purchase and providing access to digital content</li>
+                        <li>Communicating with you about your order</li>
+                        <li>Improving and maintaining the platform</li>
+                        <li>Complying with legal obligations</li>
+                    </ul>
+                </div>
+
+                <!-- Legal basis -->
+                <div class="legal-section">
+                    <h3 id="s5-title">Legal Basis (GDPR)</h3>
+                    <p id="s5-body">
+                        Processing takes place under Art. 6(1)(b) GDPR (contract performance), Art. 6(1)(c) GDPR
+                        (legal obligation), and Art. 6(1)(f) GDPR (legitimate interests) as applicable.
+                    </p>
+                </div>
+
+                <!-- Data retention -->
+                <div class="legal-section">
+                    <h3 id="s6-title">Data Retention</h3>
+                    <p id="s6-body">
+                        Personal data is retained only as long as necessary for the purposes described above, or as
+                        required by law (e.g. tax records for 10 years under German tax law).
+                    </p>
+                </div>
+
+                <!-- Rights -->
+                <div class="legal-section">
+                    <h3 id="s7-title">Your Rights</h3>
+                    <p id="s7-intro">Under GDPR, you have the right to:</p>
+                    <ul id="s7-list">
+                        <li>Access the personal data we hold about you</li>
+                        <li>Rectification of inaccurate data</li>
+                        <li>Erasure ("right to be forgotten")</li>
+                        <li>Restriction of processing</li>
+                        <li>Data portability</li>
+                        <li>Object to processing</li>
+                        <li>Lodge a complaint with a supervisory authority</li>
+                    </ul>
+                    <p id="s7-contact">To exercise these rights, contact: <a
+                            href="mailto:michel.aiinfluencer@gmail.com">michel.aiinfluencer@gmail.com</a></p>
+                </div>
+
+                <!-- Cookies -->
+                <div class="legal-section">
+                    <h3 id="s8-title">Cookies</h3>
+                    <p id="s8-body">
+                        This website uses only technically necessary session cookies to maintain your login state.
+                        No tracking, analytics, or advertising cookies are used.
+                    </p>
+                </div>
+
+                <!-- Last updated -->
+                <div class="legal-section"
+                    style="border-top: 1px solid var(--glass-border); padding-top: 20px; margin-top: 0;">
+                    <p id="s9-body" style="font-size: 0.8rem;">Last updated: March 2026</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        style="padding: 40px 5%; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); margin-top: 60px; font-size: 0.85rem;">
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px;">
+            <a href="impressum.html"
+                style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Impressum</a>
+            <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+            <a href="terms.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2026 MindRecoder – Michael Seifert. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: 'Privacy Policy',
+                s1: 'Controller / Data Protection',
+                s1body: 'The data controller responsible for processing personal data on this website is:',
+                s2: 'Data We Collect',
+                s2body: 'When you visit our website or make a purchase, the following data may be collected:',
+                s2list: ['Name and email address (provided during checkout)', 'Payment information processed via PayPal or Stripe (we do not store card data)', 'IP address and browser information (standard server logs)', 'Cookies required for session management'],
+                s3: 'Payment Processing',
+                s3body: 'Payments on MindRecoder are processed exclusively through trusted third-party payment providers. We do not store any payment card data on our servers.',
+                s4: 'Purpose of Processing',
+                s4list: ['Fulfilling your purchase and providing access to digital content', 'Communicating with you about your order', 'Improving and maintaining the platform', 'Complying with legal obligations'],
+                s5: 'Legal Basis (GDPR)',
+                s5body: 'Processing takes place under Art. 6(1)(b) GDPR (contract performance), Art. 6(1)(c) GDPR (legal obligation), and Art. 6(1)(f) GDPR (legitimate interests) as applicable.',
+                s6: 'Data Retention',
+                s6body: 'Personal data is retained only as long as necessary for the purposes described above, or as required by law (e.g. tax records for 10 years under German tax law).',
+                s7: 'Your Rights',
+                s7intro: 'Under GDPR, you have the right to:',
+                s7list: ['Access the personal data we hold about you', 'Rectification of inaccurate data', 'Erasure ("right to be forgotten")', 'Restriction of processing', 'Data portability', 'Object to processing', 'Lodge a complaint with a supervisory authority'],
+                s7contact: 'To exercise these rights, contact:',
+                s8: 'Cookies',
+                s8body: 'This website uses only technically necessary session cookies to maintain your login state. No tracking, analytics, or advertising cookies are used.',
+                s9: 'Last updated: March 2026',
+            },
+            de: {
+                pageTitle: 'Datenschutzerklärung',
+                s1: 'Verantwortlicher',
+                s1body: 'Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO):',
+                s2: 'Erhobene Daten',
+                s2body: 'Beim Besuch unserer Website oder bei einem Kauf können folgende Daten erhoben werden:',
+                s2list: ['Name und E-Mail-Adresse (beim Checkout angegeben)', 'Zahlungsinformationen, die über PayPal oder Stripe verarbeitet werden (wir speichern keine Kartendaten)', 'IP-Adresse und Browser-Informationen (Standard-Server-Logs)', 'Technisch notwendige Cookies für das Session-Management'],
+                s3: 'Zahlungsabwicklung',
+                s3body: 'Zahlungen auf MindRecoder werden ausschließlich über vertrauenswürdige Drittanbieter abgewickelt. Wir speichern keine Zahlungskartendate auf unseren Servern.',
+                s4: 'Zweck der Verarbeitung',
+                s4list: ['Erfüllung Ihres Kaufs und Bereitstellung des Zugangs zu digitalen Inhalten', 'Kommunikation mit Ihnen über Ihre Bestellung', 'Verbesserung und Wartung der Plattform', 'Einhaltung rechtlicher Verpflichtungen'],
+                s5: 'Rechtsgrundlage (DSGVO)',
+                s5body: 'Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigte Interessen).',
+                s6: 'Datenspeicherung',
+                s6body: 'Personenbezogene Daten werden nur so lange gespeichert, wie es für die beschriebenen Zwecke erforderlich ist oder gesetzlich vorgeschrieben ist (z. B. Steuerunterlagen für 10 Jahre nach deutschem Steuerrecht).',
+                s7: 'Ihre Rechte',
+                s7intro: 'Gemäß DSGVO haben Sie das Recht auf:',
+                s7list: ['Auskunft über die von uns gespeicherten personenbezogenen Daten', 'Berichtigung unrichtiger Daten', 'Löschung ("Recht auf Vergessenwerden")', 'Einschränkung der Verarbeitung', 'Datenübertragbarkeit', 'Widerspruch gegen die Verarbeitung', 'Beschwerde bei einer Aufsichtsbehörde'],
+                s7contact: 'Um diese Rechte auszuüben, kontaktieren Sie uns:',
+                s8: 'Cookies',
+                s8body: 'Diese Website verwendet ausschließlich technisch notwendige Session-Cookies zur Aufrechterhaltung Ihres Login-Status. Es werden keine Tracking-, Analyse- oder Werbe-Cookies verwendet.',
+                s9: 'Zuletzt aktualisiert: März 2026',
+            }
+        };
+
+        function setLang(lang) {
+            const t = translations[lang];
+
+            document.getElementById('page-title').textContent = t.pageTitle;
+            document.title = t.pageTitle + ' | MindRecoder';
+
+            document.getElementById('s1-title').textContent = t.s1;
+            document.getElementById('s1-body').textContent = t.s1body;
+
+            document.getElementById('s2-title').textContent = t.s2;
+            document.getElementById('s2-body').textContent = t.s2body;
+            const s2ul = document.getElementById('s2-list');
+            s2ul.innerHTML = t.s2list.map(i => `<li>${i}</li>`).join('');
+
+            document.getElementById('s3-title').textContent = t.s3;
+            document.getElementById('s3-body').textContent = t.s3body;
+
+            document.getElementById('s4-title').textContent = t.s4;
+            const s4ul = document.getElementById('s4-list');
+            s4ul.innerHTML = t.s4list.map(i => `<li>${i}</li>`).join('');
+
+            document.getElementById('s5-title').textContent = t.s5;
+            document.getElementById('s5-body').textContent = t.s5body;
+
+            document.getElementById('s6-title').textContent = t.s6;
+            document.getElementById('s6-body').textContent = t.s6body;
+
+            document.getElementById('s7-title').textContent = t.s7;
+            document.getElementById('s7-intro').textContent = t.s7intro;
+            const s7ul = document.getElementById('s7-list');
+            s7ul.innerHTML = t.s7list.map(i => `<li>${i}</li>`).join('');
+            document.getElementById('s7-contact').innerHTML = t.s7contact + ' <a href="mailto:michel.aiinfluencer@gmail.com">michel.aiinfluencer@gmail.com</a>';
+
+            document.getElementById('s8-title').textContent = t.s8;
+            document.getElementById('s8-body').textContent = t.s8body;
+
+            document.getElementById('s9-body').textContent = t.s9;
+
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+
+</html>

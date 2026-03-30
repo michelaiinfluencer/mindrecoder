@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions | MindRecoder</title>
+    <meta name="description"
+        content="Terms and Conditions (AGB) for MindRecoder – digital audio programs by Michael Seifert.">
+    <link rel="icon" href="Assets/Logo/mrLogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 4px;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 50px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-primary);
+            color: #fff;
+            box-shadow: 0 2px 10px var(--accent-glow);
+        }
+
+        .terms-section {
+            padding-bottom: 28px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .terms-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .terms-section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-num {
+            display: inline-flex;
+            width: 26px;
+            height: 26px;
+            background: rgba(0, 210, 255, 0.12);
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            flex-shrink: 0;
+        }
+
+        .terms-section p,
+        .terms-section li {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.75;
+            margin-bottom: 6px;
+        }
+
+        .terms-section ul,
+        .terms-section ol {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .terms-section li::before {
+            content: '—';
+            color: var(--accent-blue);
+            margin-right: 8px;
+            opacity: 0.6;
+        }
+
+        .terms-section a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .terms-section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(0, 210, 255, 0.05);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-top: 10px;
+        }
+
+        .page-wrap {
+            padding: calc(var(--nav-height) + 40px) 5% 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="scrolled">
+        <div class="logo-container">
+            <img src="Assets/Logo/mrLogo.png" alt="Logo" style="width: 90px; height: 90px;">
+            <span class="logo-text">MindRecoder</span>
+        </div>
+        <a href="index.html" class="btn btn-outline nav-corner-btn">← Back</a>
+    </nav>
+
+    <div class="page-wrap">
+        <!-- Header row -->
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 36px;">
+            <div>
+                <h1 class="gradient-text" style="font-size: 2.2rem; margin-bottom: 4px;" id="page-title">Terms &amp;
+                    Conditions</h1>
+                <p id="page-subtitle" style="color: var(--text-secondary); font-size: 0.85rem;">Last updated: March 2026
+                </p>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-de" onclick="setLang('de')">DE</button>
+            </div>
+        </div>
+
+        <div class="glass" style="padding: 40px; display: flex; flex-direction: column; gap: 28px;">
+
+            <!-- §1 -->
+            <div class="terms-section">
+                <h3><span class="section-num">1</span><span id="s1-title">Scope</span></h3>
+                <p id="s1-body">These Terms and Conditions apply to all purchases of digital content (audio programs)
+                    made via the website MindRecoder, operated by:</p>
+                <div class="highlight-box">
+                    <p style="margin:0;">Michael Seifert<br>
+                        Stammannstrasse 6, 22303 Hamburg, Germany<br>
+                        <a href="mailto:michel.aiinfluencer@gmail.com">michel.aiinfluencer@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- §2 -->
+            <div class="terms-section">
+                <h3><span class="section-num">2</span><span id="s2-title">Products</span></h3>
+                <p id="s2-body">MindRecoder provides digital audio programs designed for personal development, focus,
+                    and mindset improvement. All products are:</p>
+                <ul id="s2-list">
+                    <li>Delivered digitally (no physical shipment)</li>
+                    <li>Accessible after successful payment</li>
+                    <li>Intended for personal use only</li>
+                </ul>
+            </div>
+
+            <!-- §3 -->
+            <div class="terms-section">
+                <h3><span class="section-num">3</span><span id="s3-title">Conclusion of Contract</span></h3>
+                <p id="s3-body">The contract is concluded when the customer completes the payment process via:</p>
+                <ul id="s3-list">
+                    <li>Stripe</li>
+                    <li>PayPal</li>
+                </ul>
+                <p id="s3-body2">By clicking the purchase button, the customer submits a binding offer to buy the
+                    selected product.</p>
+            </div>
+
+            <!-- §4 -->
+            <div class="terms-section">
+                <h3><span class="section-num">4</span><span id="s4-title">Prices and Payment</span></h3>
+                <p id="s4-body">All prices are stated in EUR and include applicable taxes (if required). Payment is
+                    processed securely via third-party providers (Stripe or PayPal).</p>
+            </div>
+
+            <!-- §5 -->
+            <div class="terms-section">
+                <h3><span class="section-num">5</span><span id="s5-title">Delivery</span></h3>
+                <p id="s5-body">After successful payment, the customer receives:</p>
+                <ul id="s5-list">
+                    <li>Access to the purchased audio content</li>
+                    <li>A download/access link via email or website</li>
+                </ul>
+                <p id="s5-body2">Delivery is considered complete once access is granted.</p>
+            </div>
+
+            <!-- §6 -->
+            <div class="terms-section">
+                <h3><span class="section-num">6</span><span id="s6-title">Right of Withdrawal</span></h3>
+                <p id="s6-body">Due to the nature of digital content, the right of withdrawal expires under the
+                    following condition:</p>
+                <div class="highlight-box">
+                    <p id="s6-highlight" style="margin:0;">The customer expressly agrees that the execution of the
+                        contract begins immediately after purchase, and acknowledges that they lose their right of
+                        withdrawal once access to the digital content is provided.</p>
+                </div>
+            </div>
+
+            <!-- §7 -->
+            <div class="terms-section">
+                <h3><span class="section-num">7</span><span id="s7-title">Usage Rights</span></h3>
+                <p id="s7-body">All content provided by MindRecoder is protected by copyright. The customer is granted
+                    a:</p>
+                <ul id="s7-list">
+                    <li>Non-exclusive</li>
+                    <li>Non-transferable</li>
+                    <li>Personal use license</li>
+                </ul>
+                <p id="s7-body2">The following is strictly prohibited:</p>
+                <ul id="s7-list2">
+                    <li>Reselling or distributing the content</li>
+                    <li>Sharing access with third parties</li>
+                    <li>Uploading content to public platforms</li>
+                </ul>
+            </div>
+
+            <!-- §8 -->
+            <div class="terms-section">
+                <h3><span class="section-num">8</span><span id="s8-title">Disclaimer</span></h3>
+                <p id="s8-body">The audio programs are intended for informational and motivational purposes only. They
+                    do NOT:</p>
+                <ul id="s8-list">
+                    <li>Constitute medical, psychological, or financial advice</li>
+                    <li>Guarantee specific results</li>
+                </ul>
+                <p id="s8-body2">The use of the content is at the customer's own responsibility.</p>
+            </div>
+
+            <!-- §9 -->
+            <div class="terms-section">
+                <h3><span class="section-num">9</span><span id="s9-title">Liability</span></h3>
+                <p id="s9-body">The provider is only liable for damages caused by intentional or grossly negligent
+                    behavior. No liability is assumed for:</p>
+                <ul id="s9-list">
+                    <li>Lack of desired results</li>
+                    <li>Interruptions or technical issues beyond control</li>
+                </ul>
+            </div>
+
+            <!-- §10 -->
+            <div class="terms-section">
+                <h3><span class="section-num">10</span><span id="s10-title">Availability of Services</span></h3>
+                <p id="s10-body">We strive to ensure continuous availability of the content. However, temporary
+                    interruptions may occur due to technical reasons.</p>
+            </div>
+
+            <!-- §11 -->
+            <div class="terms-section">
+                <h3><span class="section-num">11</span><span id="s11-title">Data Protection</span></h3>
+                <p id="s11-body">Information on how personal data is handled can be found in the <a
+                        href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+
+            <!-- §12 -->
+            <div class="terms-section">
+                <h3><span class="section-num">12</span><span id="s12-title">Applicable Law</span></h3>
+                <p id="s12-body">These Terms shall be governed by the laws of Germany.</p>
+            </div>
+
+            <!-- §13 -->
+            <div class="terms-section">
+                <h3><span class="section-num">13</span><span id="s13-title">Final Provisions</span></h3>
+                <p id="s13-body">If any provision of these Terms is found to be invalid, the remaining provisions shall
+                    remain unaffected.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+        style="padding: 40px 5%; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); margin-top: 60px; font-size: 0.85rem;">
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px;">
+            <a href="impressum.html"
+                style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Impressum</a>
+            <a href="privacy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.2s;"
+                onmouseover="this.style.color='var(--accent-blue)'"
+                onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+            <a href="terms.html" style="color: var(--accent-blue); text-decoration: none;">Terms &amp; Conditions</a>
+        </div>
+        <p>&copy; 2026 MindRecoder – Michael Seifert. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const t = {
+            en: {
+                title: 'Terms &amp; Conditions',
+                subtitle: 'Last updated: March 2026',
+                s1: 'Scope',
+                s1body: 'These Terms and Conditions apply to all purchases of digital content (audio programs) made via the website MindRecoder, operated by:',
+                s2: 'Products',
+                s2body: 'MindRecoder provides digital audio programs designed for personal development, focus, and mindset improvement. All products are:',
+                s2list: ['Delivered digitally (no physical shipment)', 'Accessible after successful payment', 'Intended for personal use only'],
+                s3: 'Conclusion of Contract',
+                s3body: 'The contract is concluded when the customer completes the payment process via:',
+                s3list: ['Stripe', 'PayPal'],
+                s3body2: 'By clicking the purchase button, the customer submits a binding offer to buy the selected product.',
+                s4: 'Prices and Payment',
+                s4body: 'All prices are stated in EUR and include applicable taxes (if required). Payment is processed securely via third-party providers (Stripe or PayPal).',
+                s5: 'Delivery',
+                s5body: 'After successful payment, the customer receives:',
+                s5list: ['Access to the purchased audio content', 'A download/access link via email or website'],
+                s5body2: 'Delivery is considered complete once access is granted.',
+                s6: 'Right of Withdrawal',
+                s6body: 'Due to the nature of digital content, the right of withdrawal expires under the following condition:',
+                s6highlight: 'The customer expressly agrees that the execution of the contract begins immediately after purchase, and acknowledges that they lose their right of withdrawal once access to the digital content is provided.',
+                s7: 'Usage Rights',
+                s7body: 'All content provided by MindRecoder is protected by copyright. The customer is granted a:',
+                s7list: ['Non-exclusive', 'Non-transferable', 'Personal use license'],
+                s7body2: 'The following is strictly prohibited:',
+                s7list2: ['Reselling or distributing the content', 'Sharing access with third parties', 'Uploading content to public platforms'],
+                s8: 'Disclaimer',
+                s8body: 'The audio programs are intended for informational and motivational purposes only. They do NOT:',
+                s8list: ['Constitute medical, psychological, or financial advice', 'Guarantee specific results'],
+                s8body2: "The use of the content is at the customer's own responsibility.",
+                s9: 'Liability',
+                s9body: 'The provider is only liable for damages caused by intentional or grossly negligent behavior. No liability is assumed for:',
+                s9list: ['Lack of desired results', 'Interruptions or technical issues beyond control'],
+                s10: 'Availability of Services',
+                s10body: 'We strive to ensure continuous availability of the content. However, temporary interruptions may occur due to technical reasons.',
+                s11: 'Data Protection',
+                s11body: 'Information on how personal data is handled can be found in the <a href="privacy.html">Privacy Policy</a>.',
+                s12: 'Applicable Law',
+                s12body: 'These Terms shall be governed by the laws of Germany.',
+                s13: 'Final Provisions',
+                s13body: 'If any provision of these Terms is found to be invalid, the remaining provisions shall remain unaffected.',
+            },
+            de: {
+                title: 'Allgemeine Geschäftsbedingungen (AGB)',
+                subtitle: 'Zuletzt aktualisiert: März 2026',
+                s1: 'Geltungsbereich',
+                s1body: 'Diese Allgemeinen Geschäftsbedingungen gelten für alle Käufe digitaler Inhalte (Audioprogramme) über die Website MindRecoder, betrieben von:',
+                s2: 'Produkte',
+                s2body: 'MindRecoder bietet digitale Audioprogramme für persönliche Entwicklung, Fokus und Mentaltraining an. Alle Produkte sind:',
+                s2list: ['Digital geliefert (kein physischer Versand)', 'Nach erfolgreicher Zahlung zugänglich', 'Nur für den persönlichen Gebrauch bestimmt'],
+                s3: 'Vertragsabschluss',
+                s3body: 'Der Vertrag kommt zustande, wenn der Kunde den Zahlungsvorgang abschließt über:',
+                s3list: ['Stripe', 'PayPal'],
+                s3body2: 'Mit dem Klick auf den Kaufbutton gibt der Kunde ein bindendes Angebot zum Kauf des ausgewählten Produkts ab.',
+                s4: 'Preise und Zahlung',
+                s4body: 'Alle Preise sind in EUR angegeben und enthalten ggf. anfallende Steuern. Die Zahlung erfolgt sicher über Drittanbieter (Stripe oder PayPal).',
+                s5: 'Lieferung',
+                s5body: 'Nach erfolgreicher Zahlung erhält der Kunde:',
+                s5list: ['Zugang zu den erworbenen Audioinhalten', 'Einen Download-/Zugriffslink per E-Mail oder Website'],
+                s5body2: 'Die Lieferung gilt als abgeschlossen, sobald der Zugang gewährt wurde.',
+                s6: 'Widerrufsrecht',
+                s6body: 'Aufgrund der Natur digitaler Inhalte erlischt das Widerrufsrecht unter folgender Bedingung:',
+                s6highlight: 'Der Kunde stimmt ausdrücklich zu, dass die Vertragserfüllung unmittelbar nach dem Kauf beginnt, und bestätigt, dass er sein Widerrufsrecht verliert, sobald der Zugang zu den digitalen Inhalten gewährt wurde.',
+                s7: 'Nutzungsrechte',
+                s7body: 'Alle von MindRecoder bereitgestellten Inhalte sind urheberrechtlich geschützt. Dem Kunden wird eine:',
+                s7list: ['Nicht-exklusive', 'Nicht übertragbare', 'Persönliche Nutzungslizenz'],
+                s7body2: 'Folgendes ist streng verboten:',
+                s7list2: ['Weiterverkauf oder Verbreitung der Inhalte', 'Weitergabe des Zugangs an Dritte', 'Hochladen von Inhalten auf öffentliche Plattformen'],
+                s8: 'Haftungsausschluss',
+                s8body: 'Die Audioprogramme dienen ausschließlich Informations- und Motivationszwecken. Sie sind KEIN:',
+                s8list: ['Medizinischer, psychologischer oder finanzieller Rat', 'Garantie für bestimmte Ergebnisse'],
+                s8body2: 'Die Nutzung der Inhalte erfolgt auf eigene Verantwortung des Kunden.',
+                s9: 'Haftung',
+                s9body: 'Der Anbieter haftet nur für Schäden, die durch vorsätzliches oder grob fahrlässiges Verhalten verursacht wurden. Keine Haftung wird übernommen für:',
+                s9list: ['Ausbleiben gewünschter Ergebnisse', 'Unterbrechungen oder technische Probleme außerhalb unserer Kontrolle'],
+                s10: 'Verfügbarkeit der Dienste',
+                s10body: 'Wir sind bestrebt, eine kontinuierliche Verfügbarkeit der Inhalte zu gewährleisten. Vorübergehende Unterbrechungen aus technischen Gründen sind jedoch möglich.',
+                s11: 'Datenschutz',
+                s11body: 'Informationen zum Umgang mit personenbezogenen Daten finden Sie in unserer <a href="privacy.html">Datenschutzerklärung</a>.',
+                s12: 'Anwendbares Recht',
+                s12body: 'Diese AGB unterliegen dem Recht der Bundesrepublik Deutschland.',
+                s13: 'Schlussbestimmungen',
+                s13body: 'Sollte eine Bestimmung dieser AGB unwirksam sein, bleiben die übrigen Bestimmungen davon unberührt.',
+            }
+        };
+
+        function setLang(lang) {
+            const d = t[lang];
+            document.documentElement.lang = lang;
+            document.getElementById('page-title').innerHTML = d.title;
+            document.getElementById('page-subtitle').textContent = d.subtitle;
+            document.title = (lang === 'de' ? 'AGB' : 'Terms & Conditions') + ' | MindRecoder';
+
+            setText('s1-title', d.s1);
+            setText('s1-body', d.s1body);
+            setText('s2-title', d.s2);
+            setText('s2-body', d.s2body);
+            setList('s2-list', d.s2list);
+            setText('s3-title', d.s3);
+            setText('s3-body', d.s3body);
+            setList('s3-list', d.s3list);
+            setText('s3-body2', d.s3body2);
+            setText('s4-title', d.s4);
+            setText('s4-body', d.s4body);
+            setText('s5-title', d.s5);
+            setText('s5-body', d.s5body);
+            setList('s5-list', d.s5list);
+            setText('s5-body2', d.s5body2);
+            setText('s6-title', d.s6);
+            setText('s6-body', d.s6body);
+            setText('s6-highlight', d.s6highlight);
+            setText('s7-title', d.s7);
+            setText('s7-body', d.s7body);
+            setList('s7-list', d.s7list);
+            setText('s7-body2', d.s7body2);
+            setList('s7-list2', d.s7list2);
+            setText('s8-title', d.s8);
+            setText('s8-body', d.s8body);
+            setList('s8-list', d.s8list);
+            setText('s8-body2', d.s8body2);
+            setText('s9-title', d.s9);
+            setText('s9-body', d.s9body);
+            setList('s9-list', d.s9list);
+            setText('s10-title', d.s10);
+            setText('s10-body', d.s10body);
+            setText('s11-title', d.s11);
+            document.getElementById('s11-body').innerHTML = d.s11body;
+            setText('s12-title', d.s12);
+            setText('s12-body', d.s12body);
+            setText('s13-title', d.s13);
+            setText('s13-body', d.s13body);
+
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+        }
+
+        function setText(id, text) {
+            document.getElementById(id).textContent = text;
+        }
+
+        function setList(id, items) {
+            document.getElementById(id).innerHTML = items.map(i => `<li>${i}</li>`).join('');
+        }
+    </script>
+</body>
+
+</html>
